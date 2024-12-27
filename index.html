@@ -43,14 +43,11 @@
           width: 100% !important;
         }
 
-        .section-content-right {
-          margin: 0 !important;
-        }
-
         .echoes {
-          padding: 30px !important;
+          padding: 0px !important;
           flex-direction: column !important;
           margin: 0 !important;
+          margin-top: 40px !important;
         }
 
         .mailer {
@@ -60,6 +57,17 @@
         .bio {
           padding: 30px !important;
           margin: 0 !important;
+        }
+
+        .bio-image {
+          display: none !important;
+        }
+        .spacer {
+          display: none !important;
+        }
+
+        header {
+          justify-content: center !important;
         }
       }
 
@@ -80,6 +88,24 @@
         }
       }
 
+      .bio > .section-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .bio-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+      }
+
+      .bio-image > img {
+        width: 508px;
+        height: 378px;
+      }
+
       .name {
         font-size: 24px;
         font-weight: 500;
@@ -96,7 +122,7 @@
         text-align: left;
         background-color: #f6f6f6;
         line-height: 30px;
-        justify-content: end;
+        justify-content: space-between;
         padding: 80px 30px;
       }
 
@@ -111,14 +137,33 @@
         width: calc(50% - 30px);
       }
 
-      .section-content-right {
-        margin-right: auto;
-        margin-left: 0;
-      }
-
       .spacer {
         width: 30px;
         height: 30px;
+      }
+
+      .short-title {
+        font-size: 24px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .short-snippet {
+        line-height: 30px;
+        background-color: #2f4858;
+        color: white;
+        padding: 30px;
+      }
+
+      .short-description {
+        line-height: 30px;
+        padding: 30px;
+      }
+
+      .echoes {
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 60px;
       }
 
       .mailing {
@@ -130,23 +175,8 @@
         background-color: #f6f6f6;
         padding: 60px 30px;
         margin: 0;
+        margin-bottom: 60px;
         justify-content: center;
-      }
-
-      .short-title {
-        font-size: 24px;
-        font-weight: 400;
-        color: rgba(0, 0, 0, 0.6);
-      }
-
-      .short-snippet {
-        line-height: 30px;
-      }
-
-      .echoes {
-        justify-content: space-between;
-        padding-top: 60px;
-        padding-bottom: 60px;
       }
 
       .ml-form-embedWrapper,
@@ -194,9 +224,13 @@
       .contact {
         justify-content: center;
         position: absolute;
-        bottom: 0;
-        background-color: #f6f6f6;
-        margin-bottom: 0;
+        background-color: #2f4858;
+        color: white;
+        margin-bottom: 0 !important;
+
+        a {
+          color: white;
+        }
       }
     </style>
   </head>
@@ -209,8 +243,8 @@
     </header>
 
     <section class="bio">
-      <div></div>
-      <div class="section-content content-right">
+      <div class="bio-image"><img src="library.jpg" alt="my library"/></div>
+      <div class="section-content">
         My family and I live in northwest Washington. We love crawdaddy
         catching, raft making, and trailblazing. And after the rain takes its
         toll, we settle in for our traditional chamomile tea with books and
@@ -223,7 +257,7 @@
         A G34 radio lay in the sand, wet from the tide. Laying down beside it,
         Echo stretched her arms up, grasping at the stars that challenged the
         crimson sun on the horizon. She wore her classy velvet, that same one he
-        had called the ‘rags of the rich.’ Not that wealth meant roachspit
+        had called the ‘rags of the rich.’ Not that wealth meant Roachspit
         anymore. Still, Echo couldn’t help but think of how different it may
         have been for them if they had a bit more coin before—
       </div>
