@@ -21,61 +21,132 @@
       @media (max-width: 768px) {
         /* CSS styles for screens with a maximum width of 768px */
         body {
-          width: 90vw !important;
-          max-width: 90vw !important;
           padding: 0 !important;
+          margin: 0 !important;
+          text-align: center;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .section {
+          width: calc(100% - 20px) !important;
+          padding: 10px !important;
+        }
+
+        .contact {
+          position: relative !important;
+        }
+
+        .section-content, .short-description, .short-snippet {
+          width: 100% !important;
+        }
+
+        .section-content-right {
+          margin: 0 !important;
+        }
+
+        .echoes {
+          padding: 30px !important;
+          flex-direction: column !important;
+          margin: 0 !important;
+        }
+
+        .mailer {
+          padding: 60px 30px 0 30px !important;
+        }
+
+        .bio {
+          padding: 30px !important;
           margin: 0 !important;
         }
       }
 
       body {
         font-family: Georgia, sans-serif;
-        max-width: 600px;
         margin: auto;
-        padding-top: 20px;
-        text-align: center;
       }
 
       header {
-        width: 100%;
-        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 60px);
+        padding: 30px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        a {
+          line-height: 24px;
+        }
       }
 
-      h1 {
-        color: #333;
+      .name {
+        font-size: 24px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
       }
 
-      .spacing {
-        margin-bottom: 40px;
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 500;
       }
 
       .bio {
-        padding: 20px;
-        width: 100%;
         text-align: left;
         background-color: #f6f6f6;
+        line-height: 30px;
+        justify-content: end;
+        padding: 80px 30px;
+      }
+
+      section, .short {
+        display: flex;
+        width: calc(100% - 60px);
+        padding: 30px;
+        margin-bottom: 40px;
+      }
+
+      .section-content, .short-description, .short-snippet {
+        width: calc(50% - 30px);
+      }
+
+      .section-content-right {
+        margin-right: auto;
+        margin-left: 0;
+      }
+
+      .spacer {
+        width: 30px;
+        height: 30px;
+      }
+
+      .mailing {
+        width: 800px;;
+        height: 220px;
+      }
+
+      .mailer {
+        background-color: #f6f6f6;
+        padding: 60px 30px;
+        margin: 0;
+        justify-content: center;
+      }
+
+      .short-title {
+        font-size: 24px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .short-snippet {
         line-height: 30px;
       }
 
       .echoes {
-        padding: 20px;
-        width: 100%;
-        text-align: left;
-      }
-
-      .mailing {
-        width: 100%;
-        height: 220px;
-        background-color: #f6f6f6;
-      }
-
-      .echoes > h4 {
-        text-align: left;
-        font-size: 30px;
-        font-weight: 400;
-        color: black;
-        padding: 0;
-        margin: 0;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 60px;
       }
 
       .ml-form-embedWrapper,
@@ -84,6 +155,7 @@
         height: 220px;
         max-width: 100% !important;
         background-color: #f6f6f6;
+        padding: 0 !important;
       }
 
       #mlb2-19729747.ml-form-embedContainer
@@ -107,6 +179,8 @@
         .ml-form-successContent
         h4 {
         font-family: Georgia, sans-serif !important;
+        width: calc(100% - 40px) !important;
+        padding: 0 !important;
       }
 
       #mlb2-19729747.ml-form-embedContainer
@@ -114,37 +188,65 @@
         .ml-form-embedBody
         .ml-form-embedSubmit {
         float: none !important;
+        padding: 0 !important;
+      }
+
+      .contact {
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        background-color: #f6f6f6;
+        margin-bottom: 0;
       }
     </style>
   </head>
   <body>
-    <header class="spacing">
-      <h1>Kevin MacMaster</h1>
+    <header>
+      <div class="name">Kevin MacMaster</div>
+      <div class="nav">
+        <a href="#">Home</a>
+      </div>
     </header>
 
-    <section class="bio spacing">
-      My family and I live in northwest Washington. We love crawdaddy catching,
-      raft making, and trailblazing. And after the rain takes its toll, we
-      settle in for our traditional chamomile tea with books and board games.
+    <section class="bio">
+      <div></div>
+      <div class="section-content content-right">
+        My family and I live in northwest Washington. We love crawdaddy
+        catching, raft making, and trailblazing. And after the rain takes its
+        toll, we settle in for our traditional chamomile tea with books and
+        board games.
+      </div>
     </section>
 
-    <section class="echoes spacing">
-      <h4>Echoes of Me</h4>
-      <p>
-        Short story published with Flash Fiction Magazine.
-      </p>
-      <a
-        href="https://flashfictionmagazine.com/blog/2025/01/04/echoes-of-me/"
-        target="_blank"
-      >
-        Read Echoes of Me for free
-      </a>
+    <section class="short echoes">
+      <div class="short-snippet">
+        A G34 radio lay in the sand, wet from the tide. Laying down beside it,
+        Echo stretched her arms up, grasping at the stars that challenged the
+        crimson sun on the horizon. She wore her classy velvet, that same one he
+        had called the ‘rags of the rich.’ Not that wealth meant roachspit
+        anymore. Still, Echo couldn’t help but think of how different it may
+        have been for them if they had a bit more coin before—
+      </div>
+      <div class="spacer"></div>
+      <div class="short-description">
+        <div class="short-title">Echoes of Me</div>
+        <p>Short story published with Flash Fiction Magazine.</p>
+        <a
+          href="https://flashfictionmagazine.com/blog/2025/01/04/echoes-of-me/"
+          target="_blank"
+        >
+          Read Echoes of Me for free
+        </a>
+      </div>
     </section>
 
-    <section class="spacing mailing ml-embedded" data-form="VoJrsn"></section>
+    <section class="mailer">
+      <div class="mailing ml-embedded" data-form="VoJrsn"></div>
+    </section>
+    
 
-    <section class="spacing">
-      Contact me at
+    <section class="contact">
+      Contact me at&nbsp;
       <a href="mailto:info@kevinmacmaster.com">info@kevinmacmaster.com</a>
     </section>
 
