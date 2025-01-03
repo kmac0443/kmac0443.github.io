@@ -30,11 +30,6 @@
           display: none;
         }
 
-        .section {
-          width: calc(100% - 20px) !important;
-          padding: 10px !important;
-        }
-
         .contact {
           position: relative !important;
         }
@@ -47,7 +42,10 @@
           padding: 0px !important;
           flex-direction: column !important;
           margin: 0 !important;
-          margin-top: 40px !important;
+        }
+
+        .short-description {
+          background-color: #f6f6f6;
         }
 
         .mailer {
@@ -55,13 +53,9 @@
         }
 
         .bio {
-          padding: 30px !important;
           margin: 0 !important;
         }
 
-        .bio-image {
-          display: none !important;
-        }
         .spacer {
           display: none !important;
         }
@@ -92,6 +86,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 600px;
       }
 
       .bio-image {
@@ -120,9 +115,8 @@
 
       .bio {
         text-align: left;
-        background-color: #f6f6f6;
         line-height: 30px;
-        justify-content: space-between;
+        justify-content: center;
         padding: 80px 30px;
       }
 
@@ -153,6 +147,7 @@
         background-color: #2f4858;
         color: white;
         padding: 30px;
+        max-width: 600px;
       }
 
       .short-description {
@@ -161,6 +156,7 @@
       }
 
       .echoes {
+        background-color: #f6f6f6;
         justify-content: space-between;
         padding-top: 60px;
         padding-bottom: 60px;
@@ -242,17 +238,8 @@
       </div>
     </header>
 
-    <section class="bio">
-      <div class="bio-image"><img src="library.jpg" alt="my library"/></div>
-      <div class="section-content">
-        My family and I live in northwest Washington. We love crawdaddy
-        catching, raft making, and trailblazing. And after the rain takes its
-        toll, we settle in for our traditional chamomile tea with books and
-        board games.
-      </div>
-    </section>
-
     <section class="short echoes">
+      <div class="spacer"></div>
       <div class="short-snippet">
         A G34 radio lay in the sand, wet from the tide. Laying down beside it,
         Echo stretched her arms up, grasping at the stars that challenged the
@@ -271,6 +258,15 @@
         >
           Read Echoes of Me for free
         </a>
+      </div>
+    </section>
+
+    <section class="bio">
+      <div class="section-content">
+        My family and I live in northwest Washington. We love crawdaddy
+        catching, raft making, and trailblazing. And after the rain takes its
+        toll, we settle in for our traditional chamomile tea with books and
+        board games.
       </div>
     </section>
 
